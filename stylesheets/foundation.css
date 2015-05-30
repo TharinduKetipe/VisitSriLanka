@@ -4,7 +4,7 @@
 
 html { font-size: 62.5%; }
 
-body { background-image: url('../images/subtlenet2.png'); font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 14px; font-size: 1.4rem; line-height: 1; color: #222222; position: relative; -webkit-font-smoothing: antialiased; }
+body { background-image: url('../images/subtlenet2.png'); background-attachment:fixed;font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 14px; font-size: 1.4rem; line-height: 1; color: #222222; position: relative; -webkit-font-smoothing: antialiased; }
 
 /* Links ---------------------- */
 a { color:#FFEB3B; text-decoration: none; line-height: inherit; }
@@ -69,7 +69,7 @@ hr { border: solid #FFEB3B; border-width: 5px 0 0; clear: both; margin: 22px 0 2
 
 em, i { font-style: italic; line-height: inherit; }
 
-strong, b { font-weight: bold; line-height: inherit; }
+strong, b { font-weight: bold; line-height: inherit; text-shadow: 1px 1px #263238; font-family: arial;  }
 
 small { font-size: 60%; line-height: inherit; }
 
@@ -294,6 +294,79 @@ that IE7/8 do not support :nth-child.
 .block-grid.five-up { margin: 0 -8px; }
 
 .block-grid.five-up > li { width: 20%; padding: 0 8px 8px; }
+/*Slider */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: 350px;
+  float: left;
+  border: 0;
+  width:500px;
+  }
+#MainDiv
+{
+    position: relative;
+    width:800px;
+}
+
+#child .NextButton
+{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+}
+
+#child .PreButton
+{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+}
+#slider
+{
+    width: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+    #slider .slides
+    {
+        display: block;
+        width: 8000px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #slider .slide
+    {
+        float: left;
+        list-style-type: none;
+        height:120px;
+    }
+
 
 /*  .block-grid.five-up>li:nth-child(5n+1) {clear: left;} */
 /* Mobile Block Grids */
@@ -646,7 +719,7 @@ ul.tabs-content.contained.vertical > li { border-width: 1px 1px 1px 1px; }
   dl.tabs.mobile + ul.contained { margin-left: -20px; margin-right: -20px; border-width: 0 0 1px 0; } }
 
 /* Requires globals.css */
-.nav-bar { height: 40px; background: #FFEB3B; margin-top: 20px; padding: 0; }
+.nav-bar { height: 40px; background: #FFEB3B; margin-top: 20px; padding: 0; box-shadow: 5px 5px 5px #888888; }
 .nav-bar > li { float: left; display: block; position: relative; padding: 0; margin: 0; border: 1px solid #E0F7FA; border-right: none; line-height: 38px; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; }
 .nav-bar > li:first-child { -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
 .nav-bar > li:last-child { border-right: solid 1px #E0F7FA; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); }
@@ -662,7 +735,7 @@ ul.tabs-content.contained.vertical > li { border-width: 1px 1px 1px 1px; }
 .nav-bar > li.has-flyout > a.flyout-toggle { border-left: 0 !important; position: absolute; right: 0; top: 0; padding: 22px; z-index: 2; display: block; }
 .nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 55px; }
 .nav-bar > li.has-flyout.is-touch > a.flyout-toggle { border-left: 1px dashed #666; }
-.nav-bar > li > a:first-child { position: relative; padding: 0 20px; display: block; text-decoration: none; font-size: 20px; font-family: fantasy; }
+.nav-bar > li > a:first-child { position: relative; padding: 0 20px; display: block; text-decoration: none; font-size: 20px; font-family: fantasy; text-shadow: 1px 1px #263238;}
 .nav-bar > li > input { margin: 0 10px; }
 .nav-bar.vertical { height: auto; margin-top: 0; }
 .nav-bar.vertical > li { float: none; border-bottom: none; }
@@ -891,6 +964,8 @@ ul.orbit-bullets li.active.has-thumb { background-position: 0 0; border-top: 2px
 .reveal-modal.large { width: 60%; margin-left: -30%; }
 .reveal-modal.expand { width: 90%; margin-left: -45%; }
 .reveal-modal .row { min-width: 0; }
+
+
 
 
 
