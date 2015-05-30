@@ -17,9 +17,11 @@
 
   
   <!-- Included JavaScript files-->
+  <script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
   <script src="javascripts/modernizr.foundation.js"></script>
   <script type="text/javascript" src="javascripts/home.js"></script>
-
+  
+ 
 
   
 
@@ -29,6 +31,7 @@
 </head>
 
 <body>
+
 
 
 
@@ -117,37 +120,126 @@
 	
 	<div class="row">
 		<div class="twelve columns">
-			<div class="row">
-				<div class="eight columns">
-					<h3>30 Must-See HTML5 Tutorials to Help You Impress Your Audience</h3>
-					<p>
-					If you want to be a successful web developer or designer, you always have to be a step ahead. Sooner or later, HTML5 is going to strengthen its position even further and you want to be ready when that happens. Mastering the latest technology will allow you to experiment, push things further, and give you a considerable edge in the market.
-					<br /><br />
-					For this roundup we’ve prepared 30 fresh, brilliant and useful HTML5 tutorials from 2012 ranging from basic element explanation to advanced case studies.
-					</p>
-					<img src="images/30-html5-tutorials.jpeg" />
-									
-				</div>
-		
-				<div class="four columns">
-					<h4>1WD Books (click on image for video)</h4>
+			
+			<!-- Search -->
+				<div class="six columns" ng-app=PlacesApp style="box-shadow: 5px 5px 5px #888888;display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: row wrap; /* Safari 6.1+ */
+    -webkit-align-content: center; /* Safari 7.0+ */
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;">
+				<div ng-controller="plcCtrl" >
+				<div>
+  
+    <table id="search">
+        <tr>
+            <td align="right"><span style="font-family:Impact ; color:#FF6F00;">Search :</span></td>
+            <td><input ng-model="query[queryBy]" style="
+            border:2px solid #FFFF00;
+	        border-radius:10px;
+	        height: 22px;
+	        width: 230px;" /></td>
+        </tr>           
+        <tr style="background:transparent;">
+            <td align="right"><span style="font-family:Impact; color:#FF6F00;">Search By :</span></td>
+            <td>
+                <select ng-model="queryBy" style="
+            border:2px solid #FFFF00;
+	        border-radius:10px;
+	        height: 22px;
+	        width: 230px;" >
+                    <option value="$"></option>
+                    <option value="name">NAME</option>
+                    <option value="type">CATEGORY</option>
+                    <option value="location">LOCATION</option>
+                </select>   
+            </td>
+        </tr>
+    </table>
+    </div>
+    <hr>
+    <div>
+        <table id="search"  >
+            <tr>
+                <th>Place</th>
+                <th>Category</th>
+                <th>Location</th>
+            </tr>
+            <tr ng-repeat="plc in places | filter:query">
+                <td>{{plc.name}}</td>
+                <td>{{plc.type}}</td>
+                <td>{{plc.location}}</td>
+            </tr>
+        </table>
+        </div>
+        </div>
+    </div>
+				
+		    <!-- Article -->
+				<div class="six columns" style="box-shadow: 5px 5px 5px #888888;" >
+					<h4><span style="color:#E65100;">Trailblazing in Sri Lanka!</span></h4>
+					<br/>
 					
 					<!-- don't mind these, I just added them for fun! -->
+					<p align="justify">
+						Explore a multitude of unexplored destinations in the corners of Sri Lanka. Search, browse and access information on destinations with archeological and natural interests, beyond the middle-of-the-road attractions. Take home a novel experience, may it be swimming elephants of the East, golden beaches of Jaffna, hiking and mountain climbing in mid-country to reach an ancient fortress or exploring a lost city amidst the untamed jungle; the unseen Sri Lanka awaits you. Come; travel the path of the pioneers. What is more if you know about a site we missed? Tell us about your experience and we would tell the world through words, picture and video.
+					</p>
+					<br/>
+					<h5><span style="color:#E65100;">Spread the word!</span></h5>
+					<br/>
+					<p align="justi">
+						Like what you see and read? Share the lesser travelled sites of Sri Lanka through websites, blogs, forums and social networking. Facebook, tweet, blog or you tube and spread the word. You are free to use/copy the content (i.e: text,images,videos) available on this web site by providing due courtesy to Sri Lanka Tourism & a link to this site.
+					</p>
 					
-					<a href="http://fast.wistia.com/embed/iframe/127055c478?version=v1&videoWidth=640&videoHeight=360&playButton=true&volumeControl=true&controlsVisibleOnLoad=true&autoPlay=true&popover=v1&plugin%5BpostRoll%5D%5Bversion%5D=v1&plugin%5BpostRoll%5D%5Btext%5D=Click%20To%20Get%20Free%20On%20Amazon&plugin%5BpostRoll%5D%5Blink%5D=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0086I7XGM%2Fref%3Das_li_ss_tl%3Fie%3DUTF8%26tag%3D1stwebdesigne-20%26linkCode%3Das2%26camp%3D1789%26creative%3D390957%26creativeASIN%3DB0086I7XGM&plugin%5BpostRoll%5D%5Bstyle%5D%5BbackgroundColor%5D=%23616161&plugin%5BpostRoll%5D%5Bstyle%5D%5Bcolor%5D=%23ffffff&plugin%5BpostRoll%5D%5Bstyle%5D%5BfontSize%5D=36px&plugin%5BpostRoll%5D%5Bstyle%5D%5BfontFamily%5D=Gill%20Sans%2C%20Helvetica%2C%20Arial%2C%20sans-serif" class="coverimg wistia-popover[width=640,height=360,playerColor=#636155]"><img src="http://cdn1.1stwebdesigner.com/wp-content/themes/1stwd/pics/ebook_3_respnv.jpg" width="93" height="124" alt="Responsive Web Site Design, How To Get Your Site Ready For Every Device And Browser" /></a>
-					<a href="http://fast.wistia.com/embed/iframe/c1e5fe9388?version=v1&videoWidth=640&videoHeight=360&playButton=true&volumeControl=true&controlsVisibleOnLoad=true&autoPlay=true&popover=v1&plugin%5BpostRoll%5D%5Bversion%5D=v1&plugin%5BpostRoll%5D%5Btext%5D=Click%20To%20Get%20Free%20On%20Amazon&plugin%5BpostRoll%5D%5Blink%5D=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0086MEWHQ%2Fref%3Das_li_ss_tl%3Fie%3DUTF8%26tag%3D1stwebdesigne-20%26linkCode%3Das2%26camp%3D1789%26creative%3D390957%26creativeASIN%3DB0086MEWHQ&plugin%5BpostRoll%5D%5Bstyle%5D%5BbackgroundColor%5D=%23616161&plugin%5BpostRoll%5D%5Bstyle%5D%5Bcolor%5D=%23ffffff&plugin%5BpostRoll%5D%5Bstyle%5D%5BfontSize%5D=36px&plugin%5BpostRoll%5D%5Bstyle%5D%5BfontFamily%5D=Gill%20Sans%2C%20Helvetica%2C%20Arial%2C%20sans-serif" class="coverimg wistia-popover[width=640,height=360,playerColor=#636155]"><img src="http://cdn1.1stwebdesigner.com/wp-content/themes/1stwd/pics/ebook_2_html5.jpg" width="93" height="124" alt="Learn HTML5 Website Basic Features And Elements In 1 Day" /></a>
-					<a href="http://fast.wistia.com/embed/iframe/813e11baca?version=v1&videoWidth=640&videoHeight=360&playButton=true&volumeControl=true&controlsVisibleOnLoad=true&autoPlay=true&popover=v1&plugin%5BpostRoll%5D%5Bversion%5D=v1&plugin%5BpostRoll%5D%5Btext%5D=Click%20To%20Get%20Free%20On%20Amazon&plugin%5BpostRoll%5D%5Blink%5D=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0086MH6XS%2Fref%3Das_li_ss_tl%3Fie%3DUTF8%26tag%3D1stwebdesigne-20%26linkCode%3Das2%26camp%3D1789%26creative%3D390957%26creativeASIN%3DB0086MH6XS&plugin%5BpostRoll%5D%5Bstyle%5D%5BbackgroundColor%5D=%23616161&plugin%5BpostRoll%5D%5Bstyle%5D%5Bcolor%5D=%23ffffff&plugin%5BpostRoll%5D%5Bstyle%5D%5BfontSize%5D=36px&plugin%5BpostRoll%5D%5Bstyle%5D%5BfontFamily%5D=Gill%20Sans%2C%20Helvetica%2C%20Arial%2C%20sans-serif" class="coverimg wistia-popover[width=640,height=360,playerColor=#636155]"><img src="http://cdn1.1stwebdesigner.com/wp-content/themes/1stwd/pics/ebook_1_wdt.jpg" width="93" height="124" alt="Latest Web Design Trends, The Road To Good Website Design" /></a>
-					<br />
-					<hr />
-					<img src="images/ad-banner.png" />
+					
+					
+					
 				</div>
+
 			</div>
+
+		</div>
+		<!-- video-->
+		<div class="row">
+		<div class="twelve columns" style="">
+			<hr />
+			</div>
+			<div class="four columns" style="box-shadow: 5px 5px 5px #888888;">
+			<h4><span style="color:#E65100;">Discover the many flavours of Sri Lanka</span></h4>
+					<br/>
+					
+					<!-- don't mind these, I just added them for fun! -->
+					<p align="justify">
+						Thanks to its strategic position on the route between East and West, many cultures have influenced Sri Lanka's cuisine. Neighbours, traders, immigrants and colonisers have all left their mark on the island's food, creating a mouthwatering blend of Dutch, Portuguese, English, Arab, Malay and Indian flavours.
+						Sri Lanka is a multi-ethnic and multi-religious society. The main ethnic groups are the Sinhalese (predominantly Buddhist) and Tamils (primarily Hindu), both originally from the Indian subcontinent. Then there are the Muslims (also called the Sri Lankan Moors), descendants of the Arab or Indian traders who arrived when Sri Lanka became an ancient trading centre. Similarly, Malays and Chinese were also attracted to the island.
+
+
+
+
+					</p>
+				
+			</div>
+
+			<div class="eight columns" style="box-shadow: 5px 5px 5px #888888;">
+
+			<video width="600" height="450" controls>
+            <source src="media/video.mp4" type="video/mp4">
+            
+Your browser does not support the video tag.
+</video>
+				
+			
+
+
+			
+		</div>
+		
 		</div>
 	</div>
 	<!-- footer -->
 	<div class="row">
 		<div class="twelve columns">
-		<hr />
+		<hr style="box-shadow: 5px 5px 5px #888888;"/ >
 		<table class="twelve columns" style="background:transparent; border="0px solid : transparent" ">
 		<tr>
 		<td>
@@ -191,7 +283,7 @@
 	</tr>
 	</table>
 	
-		<div class="twelve columns" style="min-heigt:5px; background:#FFEB3B; padding:0px; align="center;" ">
+		<div class="twelve columns" style="min-heigt:5px; background:#FFEB3B; padding:0px; box-shadow: 5px 5px 5px #888888;">
 		<p align="center"><span style="color:#D50000; "><b>© 2015 Thanrindu Ketipearachchi | RedbelT</span></b></p>
 		
 		

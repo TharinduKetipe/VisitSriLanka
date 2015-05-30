@@ -31,23 +31,62 @@ function next(num, arrayLength) {
 var interval = 200; // You can change this value to your desired speed. The value is in milliseconds, so if you want to advance a slide every 5 seconds, set this to 5000.
 var switching = setInterval("toggleSlide(true)", interval);
 window.paused = false;
-function toggleInterval() {
-    var button = document.getElementById("pauseButton");
-    if(!window.paused) {
-        clearInterval(switching);
-        button.value = "Resume";
-    } else {
-        switching = setInterval("toggleSlide(true)", interval);
-        button.value = "Pause";
-    }
-    window.paused = !(window.paused);
-}
-var sn = document.getElementById("slideNumber");
-sn.innerHTML = (makeVisible + 1);
-if(!where) {
-    elements[0].style.display = "block";
-    sn.innerHTML = 1;
-} else {
-    elements[elements.length-1].style.display = "block";
-    sn.innerHTML = elements.length;
-}
+
+/* Search */
+
+var placesApp = angular.module("PlacesApp",[]);
+  placesApp.controller("plcCtrl",function($scope){
+    $scope.query = {}
+    $scope.queryBy = '$'
+    $scope.places = [
+      {
+        "name" : "Yala National Park",
+        "type" : "Wildl Life",
+        "location" : "Yala"
+      },
+      {
+        "name" : "Wilpattu National Park",
+        "type" : "Wildl Life",
+        "location" : "Wilpattuwa"
+      },
+      {
+        "name" : "Boondala National Park",
+        "type" : "Boondala",
+        "location" : "Yala"
+      },
+      {
+        "name" : "Arugam Bay",
+        "type" : "Coastal region",
+        "location" : "Arugambay"
+      },
+       {
+        "name" : "Hikkaduwa",
+        "type" : "Coastal region",
+        "location" : "Hikkaduwa"
+      },
+       {
+        "name" : "Unawatuna",
+        "type" : "Coastal region",
+        "location" : "Unawatuna"
+      },
+      {
+        "name" : "Galle",
+        "type" : "Historical",
+        "location" : "Galle"
+      },
+      {
+        "name" : "Kandy",
+        "type" : "Historical",
+        "location" : "Kandy"
+      },
+      {
+        "name" : "Dambulla",
+        "type" : "Historical",
+        "location" : "Dambulla"
+      }
+     
+     
+    ];
+    $scope.orderProp="name";                
+  });
+
