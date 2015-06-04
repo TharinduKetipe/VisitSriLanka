@@ -202,6 +202,9 @@
 		<!-- video-->
 		<div class="row">
 		<div class="twelve columns" style="">
+
+
+
 			<hr />
 			</div>
 			<div class="four columns" style="box-shadow: 5px 5px 5px #888888;">
@@ -217,8 +220,10 @@
 
 
 					</p>
+
 				
 			</div>
+			</canvas>
 
 			<div class="eight columns" style="box-shadow: 5px 5px 5px #888888;">
 
@@ -236,6 +241,40 @@ Your browser does not support the video tag.
 		
 		</div>
 	</div>
+	<div class="row">
+		
+
+		<canvas id="myCanvas" class="six columns">
+       Your browser does not support the HTML5 canvas tag.</canvas>
+       <div class="three columns">
+       <img src="images/logoel.svg" align="left"/>
+       	
+       </div>
+       <div class="three columns">
+        <img src="images/eco_logo.svg" align="left"/>
+       	
+       </div>
+
+       </div>
+
+     <script>
+     var c = document.getElementById("myCanvas");
+     var ctx = c.getContext("2d");
+
+     // Create gradient
+     var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+     grd.addColorStop(0,"#FFEB3B");
+     grd.addColorStop(1,"#FFC107");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,350,80);
+    </script>
+			
+		
+	</div>
+	
+
 	<!-- footer -->
 	<div class="row">
 		<div class="twelve columns">
