@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Accommodations | Visit Srilanka</title>
+
+  <script>
+</script>
+ <!-- Load script for performance -->
+  <script src="lib/angular/angular.min.js"></script>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"
+  <script src="js/controllers.js"></script>
+     <link rel="stylesheet" href="stylesheets/main.css"> 
+        <link rel="stylesheet" href="stylesheets/style.css"> 
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/mapc.css">
+   <script src="js/test"></script>
+    <script type="text/javascript" src="jquery.gmap.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><script src="http://maps.gstatic.com/maps-api-v3/api/js/21/2/main.js"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.0/src/infobox_packed.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script src="lib/angular/angular-route.min.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/jqueryMyFile.js"></script>
+   <script src="js/jmap.js"></script>
+   
+  <script type="text/javascript" src="accordion.js"></script>
+
+</head>
+    <div id="header">
+<h1 align="center"> Welcome To Sri Lanka</h1>
+
+
+</div>
+ <body class="body">
+        <!-- Start Main Header -->
+       <header class="mainHeader">
+            <img  src="images/header.png" alt="Site logo" >
+           
+          
+            <!-- Start Navigation  -->
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>                   
+                <li><a href="pages/places.html">Places</a></li>
+                <li><a href="../foodculture.html">Foods & Culture</a></li>
+                <li><a href="../art&Craft.html">Arts & Crafts</a></li>
+                <li class="active"><a href="Accommodations.html">Accommodations</li>
+                </ul>
+            </nav>
+             
+        </header>
+        <!-- End Main Header -->
+        <div align="center" class="addSlider">
+            <script type="text/javascript">
+                slideit()
+            </script>
+           </div>
+
+            <!-- Start Main Content -->
+        <div class="mainContnet">
+            <div class="content">
+                <article class="topContent">
+                    <header>
+                        <h2><a href="#" titel="FirstPost">Beautiful of Sri Lanka</a></h2> 
+					<p class="post-info">	Click to view</p>					
+                    </header>
+ <div class="main">
+		<div class="accordion">
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-1">SIGIRIYA</a>
+				<div id="accordion-1" class="accordion-section-content">
+					<img src="images/sigiriya.jpg">
+				</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-2">KANDY</a>
+				<div id="accordion-2" class="accordion-section-content">
+				<img src="images/maligawa.jpg">
+					</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-3">ANURADHAPURA</a>
+				<div id="accordion-3" class="accordion-section-content">
+				<img src="images/anuradapura.jpg">
+					</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+		</div><!--end .accordion-->
+	</div>
+
+                   
+                </article>
+           <article class="bottomContent">
+                    <header>
+                        <h1><a href="#" titel="secontPost">Just for You</a></h1>   
+                    </header>
+                    <footer>
+                        <p class="post-info"> Showing Holiday Apartments, Villas, Bungalows, Guest Houses, Holiday Homes in Sri Lanka </p>
+                    </footer>
+<body>
+<!--start search accommodation menu-->
+<div class="main" ng-controller = "MyController">
+
+  <div class="search">
+    <label>search: </label>
+    <input ng-model="query" placeholder="Search for accommodations" autofocus>
+
+    <label class="formgroup">by:
+      <select ng-model="accOrder">
+        <option value="name">Name</option>
+        <option value="location">Lacation</option>
+      </select>
+    </label> 
+  </div>
+  <ul class="acclist">
+    <li class="acc cf" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+      <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+      <div class="info">
+        <h2>{{item.name}}</h2>
+        <h3><b>Location :-</b>{{item.location}}</h3>
+      </div>
+    </li>
+  </ul>
+</div></article></div>
+</div>
+ <!-- End Main Content -->      
+   
+        <!-- Start Aside bar Slider -->
+		<!--Start top aslider-->
+        <aside class="top-sidebar">
+            <article>
+                <h2>Visit Sri Lanka</h2>
+                <p>wonder of Asia</p>
+                <iframe width=100% height=auto
+		src="http://www.youtube.com/watch?v=ewfLy809V6o">
+		</iframe
+            </article>
+        </aside>
+		<!--end top asider-->
+		<!--start second asider-->
+        <aside class="middle-sidebar" >
+            <article width=100% height=auto >
+			<h1>Sri Lanka<h1>
+		<canvas id="myCanvas" width="300px" height="400px" style="border:1px solid grey;">
+        </canvas>           
+        </aside>
+		<!--end second asider-->
+		<!--Start bottom-asidebar-->
+        <aside class="bottom-sidebar">
+     
+               
+            </fieldset>
+            </div>
+        </div>
+        <div class="div" style="background-color:#82CAFA;"><h2 align="center">Colombo</h2></div>
+      <div class="div" style="background-color:#82CAFA;"><h2 align="center">Gampha</h2></div>
+      <div class="div" style="background-color:#82CAFA;"><h2 align="center">Kaluthara</h2></div>
+	  <div class="div" style="background-color:#82CAFA;"><h2 align="center">Kandy</h2></div>
+       <div class="div" style="background-color:#82CAFA;"><h2 align="center">Nuwara Eliya</h2></div>             
+       <div class="div" style="background-color:#82CAFA;"><h2 align="center">Anuradhapura</h2></div>      
+        <div class="div" style="background-color:#82CAFA;"><h2 align="center">Polonnaruwa</h2></div>
+        <div class="div" style="background-color:#82CAFA;"><h2 align="center">Kurunegala</h2></div>   
+        </aside>
+        
+        <!-- End Aside Bar Slider -->
+        
+        <!-- Start Main Footer -->
+        <footer class="mainFooter">
+            <p>Copyright &copy; <a href="index.html" >Sri Lanka | 2012CS068</a> KPTM JAYASINGHA </p>
+        </footer>
+        <!-- End Main Footer -->
+</body>
+</html>

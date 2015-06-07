@@ -1,0 +1,35 @@
+[
+  {
+    "name":"Bandarawela Hotel",
+    "shortname":"hotel1",
+    "location":"Bandarawela",
+    "Type":"top"
+  },
+  {
+    "name":"The River House",
+    "shortname":"hotel2",
+    "location":"Nuwara Eliya",
+    "type":"top"},
+
+  
+  {
+    "name":"Mount lavinia Hotel",
+    "shortname":"hotel10",
+    "location":"Mount Lavinia",
+   "type":"top"},
+  {
+    "name":"Unawatuna Beach Resort",
+    "shortname":"hotel7",
+    "location":"Unawatuna",
+   "type":"top"},
+  {
+    "name":"Full Moon Garden Hotel",
+    "shortname":"hotel8",
+    "location":"Colombo",
+  "type":"top"},
+  {
+    "name":"Randholee Luxury Resort Kandy",
+    "shortname":"hotel9",
+    "location":"Kandy",
+   "type":"top"}
+]

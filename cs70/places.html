@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Ceylon Info</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+		<script src="js/myfooter.js"></script>	
+		<!-- The main CSS file -->
+		<link href="css/menu.css" rel="stylesheet" />
+		<link href="css/myfooter.css" rel="stylesheet" />
+		<link href="css/myvideo.css" rel="stylesheet" />
+<!-- add images -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="imageslide.js"></script>
+<!-- add video -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/jquery_video2.js"></script>
+  <script src="js/jquery_video1.js"></script>
+ <script src="js/myvideo1.js"></script>
+</head>
+
+	<!-- The ng-app directive tells angular that the code below should be evaluated -->
+	<body ng-app>
+	<nav class="{{active}}" ng-click="$event.preventDefault()">
+<!-- When a link in the menu is clicked, we set the active variable -->
+
+			<a href="../index.html" class="home" ng-click="active='home'">Home</a>
+			<a href="#" class="places" ng-click="active='places'">Places</a>
+			<a href="#" class="services" ng-click="active='services'">Services</a>
+			<a href="../cs68/Accommodations.html" class="accomerdation" ng-click="active='accomerdation'">Accomerdation</a>
+		</nav>
+		
+		<p ng-show="active">Wellcome To Sri Lanka Info..You are select <b>{{active}}</b></p>
+<!-- Include AngularJS from Google's CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<p text="bolt">Sri Lanka is filled with romantic landscapes, governed by rising mountains, lush forests, ocean like tanks and gushing waterfalls, that it was considered the lost paradise by many a globe trotters, who fell upon the country.</p>
+<!-- html for images -->
+
+<ul class="imgslides">
+<h2>Beauty of Yala</h2>
+  <ul><img  src="images/img1.jpeg"  width="80%" alt=""></ul>
+<h2>Beauty of Hatton</h2>
+  <ul><img  src="images/img2.jpeg" width="80%" alt=""></ul>
+<h2>Beauty of Badulla</h2>
+  <ul><img  src="images/img5.jpeg" width="80%" alt=""></ul>
+</ul>
+
+<!--for add video -->
+<ul class="bxslider">
+ <!--Here use utube link for play video -->
+    <iframe src="https://www.youtube.com/watch?v=cvXiEAb0g9A" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen ></iframe>
+    
+</ul>
+<br>
+<br>
+<!--footer -->
+<footer class="footer">
+  	<p>Copyright &copy; 2012CS070 | GHCE Karunarathne</p>
+  
+	</footer>
+	</body>
+	
+</html>
